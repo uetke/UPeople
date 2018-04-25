@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block content %}
+    {% for course in courses %}
+        <div class="row">
+            <div class="col-md-2">{{ course.name }}</div>
+            <div class="col-md-3">{{ course.from_to }}</div>
+            <div class="col-md-2">{{ course.contacts|length }}</div>
+        </div>
+
+    {% endfor %}
+
+{% endblock %}

@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block content %}
+    {% for contact in contacts %}
+        <div class="row">
+            <div class="col-md-2">{{ contact.first_name }} {{ contact.last_name }}</div>
+            <div class="col-md-2">{{ contact.email }}</div>
+            <div class="col-md-2">{{ contact.group }}</div>
+            <div class="col-md-2"><a href="/new_contact/{{ contact.id }}">Edit</a> </div>
+        </div>
+        <hr>
+    {% endfor %}
+{% endblock %}
